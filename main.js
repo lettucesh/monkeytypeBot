@@ -6,7 +6,7 @@ const typeActiveWord = async (page) => {
     while (activeWordExists) {
         const typeWord = await getWord(page);
         if (typeWord) {
-            await page.type('#typingTest', typeWord + ' ', { delay: 0 });
+            await page.type('#typingTest', typeWord + ' ', { delay: 50 });
         } else {
             activeWordExists = false;
         }
